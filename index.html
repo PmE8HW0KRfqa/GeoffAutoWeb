@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Geoff's Auto Repair</title>
+	<style>
+		:root {
+			--primary-color: #2c3e50;
+			--accent-color: #e74c3c;
+			--text-color: #333;
+			--bg-color: #f4f4f4;
+			--card-bg: #fff;
+		}
+
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		html {
+			height: 100%;
+		}
+
+		body {
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			line-height: 1.6;
+			color: var(--text-color);
+			background: linear-gradient(135deg, #1a2a3a 0%, #2c3e50 100%) no-repeat center center fixed;
+			background-size: cover;
+			min-height: 100vh;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			padding: 20px;
+			margin: 0;
+			overflow-x: hidden;
+		}
+
+		.container {
+			max-width: 1000px;
+			width: 100%;
+			display: grid;
+			grid-template-columns: 1.2fr 1fr;
+			gap: 40px;
+			background: rgba(255, 255, 255, 0.98);
+			padding: 50px;
+			border-radius: 12px;
+			box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+			border-top: 5px solid var(--accent-color);
+			margin: 20px auto;
+			word-wrap: break-word;
+		}
+
+		h1 {
+			color: var(--primary-color);
+			margin-bottom: 25px;
+			font-size: 2.2rem;
+			border-bottom: 3px solid var(--accent-color);
+			display: inline-block;
+			line-height: 1.2;
+		}
+
+		h2 {
+			color: var(--primary-color);
+			margin: 20px 0 8px;
+			font-size: 1.3rem;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}
+
+		.info-section {
+			margin-bottom: 25px;
+		}
+
+		.info-section p {
+			margin-bottom: 4px;
+		}
+
+		.contact-pane a {
+			color: var(--accent-color);
+			text-decoration: none;
+			font-weight: bold;
+			transition: color 0.2s;
+		}
+
+		.contact-pane a:hover {
+			color: #c0392b;
+			text-decoration: underline;
+		}
+
+		/* Image Pane Styles */
+		.image-pane {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(2, 1fr);
+			gap: 15px;
+			align-content: start;
+		}
+
+		.image-placeholder {
+			background: #ecf0f1;
+			aspect-ratio: 4 / 3;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 6px;
+			color: #95a5a6;
+			font-weight: bold;
+			border: 2px dashed #bdc3c7;
+			transition: all 0.3s ease;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.image-placeholder:hover {
+			background: #dfe6e9;
+			border-color: var(--accent-color);
+			color: var(--primary-color);
+			transform: translateY(-2px);
+		}
+
+		.special-note {
+			font-style: italic;
+			color: #7f8c8d;
+			margin-top: 10px;
+			font-size: 0.95rem;
+			border-left: 3px solid #eee;
+			padding-left: 15px;
+		}
+
+		/* Responsive Design */
+		@media (max-width: 900px) {
+			.container {
+				grid-template-columns: 1fr;
+				padding: 40px;
+				max-width: 600px;
+			}
+
+			h1 {
+				font-size: 2rem;
+			}
+		}
+
+		@media (max-width: 500px) {
+			.container {
+				padding: 25px;
+				margin: 10px;
+			}
+
+			.image-pane {
+				grid-template-columns: 1fr;
+			}
+
+			h1 {
+				font-size: 1.7rem;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<!-- Main Pane: Contact Info -->
+		<main class="contact-pane">
+			<h1>Geoff's Auto Repair</h1>
+			<section class="info-section">
+				Friendly, Honest, and Accurate Auto Service
+			</section>
+			<section class="info-section">
+				<h2>Hours</h2>
+				<p>Monday to Friday (excluding statutory holidays)</p>
+				<p>8:00am to 5:00pm</p>
+				<p>Front door key drop anytime</p>
+				<p class="special-note">Call the shop for special arrangements. We're happy to help.</p>
+			</section>
+
+			<section class="info-section">
+				<h2>Location</h2>
+				<p>262 Cree Rd</p>
+				<p>Sherwood Park, AB</p>
+				<p>Alberta T8A 4G2</p>
+
+				<button
+						onclick="window.open('https://www.google.com/maps/place/Geoff%27s+Auto+Repair/@53.5392329,-113.3323377,17z/data=!3m1!4b1!4m5!3m4!1s0x53a017d76539bcab:0xb99ecc95c397680a!8m2!3d53.5392329!4d-113.330149')">Get
+					Directions</button>
+
+			</section>
+
+			<section class="info-section">
+				<h2>Contact</h2>
+				<p>Email: <a href="mailto:Drive1@telus.net">Drive1@telus.net</a></p>
+				<p>Phone: <a href="tel:7804670783">(780) 467-0783</a></p>
+				<p>
+				
+					<a href="https://www.facebook.com/GeoffsAutoService/" target="_blank" aria-label="Facebook" style="display: inline-flex; align-items: center; justify-content: center; width: 60px; height: 60px; background-color: #1877F2; color: white; border-radius: 12px; text-decoration: none; transition: background 0.3s ease;">
+  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+  </svg>
+</a>
+				</p>
+			</section>
+		</main>
+
+		<!-- Second Pane: Image Placeholders -->
+		<aside class="image-pane">
+			<div class="image-placeholder"><span>Image 1</span></div>
+			<div class="image-placeholder"><span>Image 2</span></div>
+			<div class="image-placeholder"><span>Image 3</span></div>
+			<div class="image-placeholder"><span>Image 4</span></div>
+
+
+
+		</aside>
+
+		<lower1>
+			<h2>Expert Vehicle Repair & Maintenance Services</h2>
+			<p>Our workshop leverages decades of industry expertise to deliver comprehensive repair, maintenance, and
+				diagnostic solutions that optimize vehicle performance and extend component longevity.</p>
+			<br>
+			<p>
+				Certified technicians implement advanced tooling, original-equipment components, and rigorous quality
+				controls, thereby demonstrating unwavering commitment to safety, transparency, and measurable results.
+			</p>
+
+		</lower1>
+		<lower2>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2371.038154385674!2d-113.33233772290495!3d53.53923296027322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a017d76539bcab%3A0xb99ecc95c397680a!2sGeoff&#39;s%20Auto%20Repair!5e0!3m2!1sen!2sca!4v1775936107258!5m2!1sen!2sca"
+					width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"></iframe>
+			<!-- <h2>General Automotive Services</h2>
+			<p>
+				We provide reliable, high-quality general automotive services for all makes and models. From routine
+				maintenance and oil changes to brake repairs, tire services, suspension work, and electrical diagnostics
+				—
+				our experienced technicians are equipped to keep your vehicle running safely and efficiently.
+			</p>
+			<br>
+			<p>
+				Whether you need a simple tune-up, fluid replacements, battery testing, or more complex repairs, we
+				deliver
+				honest, transparent service using quality parts and the latest diagnostic tools. Our goal is to extend
+				the
+				life of your vehicle while saving you time and money.
+			</p>
+
+			<br>
+			<p>
+				Customer satisfaction, integrity, and attention to detail are at the heart of everything we do. Drive in
+				with confidence — leave knowing your car is in expert hands.
+			</p> -->
+		</lower2>
+	</div>
+</body>
+
+</html>
