@@ -197,6 +197,32 @@
 			gap: 10px;
 		}
 
+		.btn-phone {
+			color: #27ae60 !important;
+			padding: 10px 24px;
+			border-radius: 24px;
+			font-size: 15px;
+			font-weight: 600;
+			gap: 10px;
+		}
+
+		.btn-email {
+			color: var(--primary-color) !important;
+			padding: 10px 24px;
+			border-radius: 24px;
+			font-size: 15px;
+			font-weight: 600;
+			gap: 10px;
+		}
+
+		.contact-buttons {
+			display: flex;
+			flex-direction: column;
+			gap: 12px;
+			align-items: flex-start;
+			margin-top: 10px;
+		}
+
 		.btn svg {
 			fill: currentColor;
 			flex-shrink: 0;
@@ -336,8 +362,7 @@
 			<section class="info-section">
 				<h2>Location</h2>
 				<p>262 Cree Rd</p>
-				<p>Sherwood Park, AB</p>
-				<p>Alberta T8A 4G2</p>
+				<p>Sherwood Park, Alberta</p>
 
 				<a href="https://www.google.com/maps/place/Geoff%27s+Auto+Repair/@53.5392329,-113.3323377,17z/data=!3m1!4b1!4m5!3m4!1s0x53a017d76539bcab:0xb99ecc95c397680a!8m2!3d53.5392329!4d-113.330149"
 					 target="_blank" class="btn btn-directions">
@@ -355,22 +380,34 @@
 
 			<section class="info-section">
 				<h2>Contact</h2>
-				<p>Email: <a
-						 href="mailto:&#x44;&#x72;&#x69;&#x76;&#x65;&#x31;&#x40;&#x74;&#x65;&#x6c;&#x75;&#x73;&#x2e;&#x6e;&#x65;&#x74;">Drive1@telus<!--.SPAM-->.net</a>
-				</p>
-				<!-- 
-				The email address above is obfuscated using HTML entities to prevent bots from scraping it. 
-				The comment in the above email address is intentional to prevent bots from scraping it. Please do not remove it.
-				https://spencermortensen.com/articles/email-obfuscation/#text-entity
-				-->
-				<p>Phone: <a href="tel:7804670783">(780) 467-0783</a></p>
-				<a href="https://www.facebook.com/GeoffsAutoService/" target="_blank" class="btn btn-facebook">
-					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-						<path
-									d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-					</svg>
-					Follow on Facebook
-				</a>
+				<div class="contact-buttons">
+					<a href="mailto:&#x44;&#x72;&#x69;&#x76;&#x65;&#x31;&#x40;&#x74;&#x65;&#x6c;&#x75;&#x73;&#x2e;&#x6e;&#x65;&#x74;"
+						 class="btn btn-email">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+							<path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+						</svg>
+						Drive1@telus<!--.SPAM-->.net
+					</a>
+					<!-- 
+					The email address above is obfuscated using HTML entities to prevent bots from scraping it. 
+					The comment in the above email address is intentional to prevent bots from scraping it. Please do not remove it.
+					https://spencermortensen.com/articles/email-obfuscation/#text-entity
+					-->
+					<a href="tel:7804670783" class="btn btn-phone">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+							<path
+										d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+						</svg>
+						(780) 467-0783
+					</a>
+					<a href="https://www.facebook.com/GeoffsAutoService/" target="_blank" class="btn btn-facebook" style="margin-top: 0;">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+							<path
+										d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+						</svg>
+						Follow on Facebook
+					</a>
+				</div>
 			</section>
 		</main>
 
