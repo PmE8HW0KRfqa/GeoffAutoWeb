@@ -34,7 +34,7 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			padding: 40px 20px;
+			padding: 48px 24px;
 		}
 
 		.container {
@@ -42,10 +42,10 @@
 			width: 100%;
 			display: grid;
 			grid-template-columns: 1.2fr 1fr;
-			column-gap: 60px;
-			row-gap: 30px;
+			column-gap: 64px;
+			row-gap: 48px;
 			background: #ffffff;
-			padding: 60px;
+			padding: 56px;
 			border-radius: 16px;
 			box-shadow: var(--shadow);
 			border-top: 6px solid var(--accent-color);
@@ -54,19 +54,15 @@
 
 		/* Services & Full Width Section */
 		.services-section,
+		.location-section,
 		.full-width-image {
 			grid-column: 1 / -1;
-		}
-
-		.services-section {
-			padding-top: 10px;
 		}
 
 		.full-width-image img {
 			width: 100%;
 			border-radius: 12px;
 			box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-			margin-top: 30px;
 			display: block;
 		}
 
@@ -211,7 +207,7 @@
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 			gap: 16px;
-			margin: 24px 0;
+			margin: 0 0 32px 0;
 		}
 
 		.service-item {
@@ -257,19 +253,43 @@
 			border-left: 2px solid var(--accent-color);
 		}
 
+		/* Location Section */
+		.location-grid {
+			display: grid;
+			grid-template-columns: 1fr 1.5fr;
+			gap: 40px;
+			align-items: start;
+		}
+
+		.location-details {
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+		}
+
+		.location-details p {
+			font-size: 1.125rem;
+			font-weight: 500;
+			color: var(--primary-color);
+		}
+
 		/* Responsive */
 		@media (max-width: 1024px) {
 			.container {
 				grid-template-columns: 1fr;
-				padding: 40px;
+				padding: 48px;
 				gap: 40px;
 			}
 			.btn { max-width: 100%; }
+			.location-grid {
+				grid-template-columns: 1fr;
+				gap: 24px;
+			}
 		}
 
 		@media (max-width: 640px) {
-			body { padding: 10px; }
-			.container { padding: 30px 20px; border-radius: 0; }
+			body { padding: 8px; }
+			.container { padding: 40px 24px; border-radius: 0; }
 			h1 { font-size: 2.25rem; }
 		}
 	</style>
@@ -373,11 +393,18 @@
 				</div>
 			</section>
 
-			<section class="info-section">
-				<h2>Location</h2>
-				<p>262 Cree Rd, Sherwood Park, Alberta</p>
+		</main>
 
-				<div style="margin-top: 15px; display: flex; flex-direction: column; gap: 16px;">
+		<!-- Second Pane: Image -->
+		<aside class="image-pane">
+			<img src="ShopYellowCar.jpg" alt="An interior shot of the shop, showing a yellow car on the hoist.">
+		</aside>
+
+		<section class="info-section location-section">
+			<h2>Location</h2>
+			<div class="location-grid">
+				<div class="location-details">
+					<p>262 Cree Rd, Sherwood Park, Alberta</p>
 					<a href="https://www.google.com/maps/place/Geoff%27s+Auto+Repair/@53.5392329,-113.3323377,17z/data=!3m1!4b1!4m5!3m4!1s0x53a017d76539bcab:0xb99ecc95c397680a!8m2!3d53.5392329!4d-113.330149"
 						 target="_blank" class="btn btn-directions">
 						<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
@@ -387,20 +414,16 @@
 							<path fill="#34A853" d="M18.12 12.46L12 22v-9.54c1.38 0 2.5-1.12 2.5-2.5s-1.12-2.5-2.5-2.5V5.38c2.23 0 4.14 1.58 4.6 3.73.13.61.2 1.25.2 1.89 0 .5-.04 1-.12 1.46z" />
 							<circle fill="#fff" cx="12" cy="9" r="2.5" />
 						</svg>
-						Open in Google Maps
+						Get Directions
 					</a>
+				</div>
+				<div class="location-map">
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2371.038154385674!2d-113.33233772290495!3d53.53923296027322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a017d76539bcab%3A0xb99ecc95c397680a!2sGeoff&#39;s%20Auto+Repair!5e0!3m2!1sen!2sca!4v1775936107258!5m2!1sen!2sca"
 									style="border:0;" allowfullscreen="" loading="lazy"
 									referrerpolicy="no-referrer-when-downgrade"></iframe>
 				</div>
-
-			</section>
-		</main>
-
-		<!-- Second Pane: Image -->
-		<aside class="image-pane">
-			<img src="ShopYellowCar.jpg" alt="An interior shot of the shop, showing a yellow car on the hoist.">
-		</aside>
+			</div>
+		</section>
 
 		<section class="services-section">
 			<h2>Services</h2>
