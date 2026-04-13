@@ -7,12 +7,12 @@
 	<title>Geoff's Auto Repair | Mechanic Sherwood Park</title>
 	<style>
 		:root {
-			--primary-color: #1e293b; /* Darker, more professional slate */
-			--accent-color: #dc2626;  /* Stronger, cleaner red */
+			--primary-color: #1e293b;
+			--accent-color: #dc2626;
 			--text-color: #334155;
 			--bg-light: #f8fafc;
 			--border-color: #e2e8f0;
-			--shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+			--shadow-lg: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
 		}
 
 		* {
@@ -25,11 +25,8 @@
 			font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
 			line-height: 1.6;
 			color: var(--text-color);
-			background-color: #0f172a;
-			background-image: 
-				radial-gradient(at 0% 0%, rgba(30, 41, 59, 0.5) 0, transparent 50%),
-				radial-gradient(at 100% 0%, rgba(220, 38, 38, 0.1) 0, transparent 50%);
-			background-attachment: fixed;
+			background: #0f172a radial-gradient(at 0% 0%, rgba(30, 41, 59, 0.5) 0, transparent 50%),
+				radial-gradient(at 100% 0%, rgba(220, 38, 38, 0.1) 0, transparent 50%) fixed;
 			min-height: 100vh;
 			display: flex;
 			align-items: center;
@@ -42,33 +39,23 @@
 			width: 100%;
 			display: grid;
 			grid-template-columns: 1.2fr 1fr;
-			column-gap: 64px;
-			row-gap: 48px;
-			background: #ffffff;
+			gap: 48px 64px;
+			background: #fff;
 			padding: 56px;
 			border-radius: 16px;
-			box-shadow: var(--shadow);
+			box-shadow: var(--shadow-lg);
 			border-top: 6px solid var(--accent-color);
-			position: relative;
 		}
 
-		/* Services & Full Width Section */
-		.services-section,
-		.location-section,
-		.full-width-image {
+		.services-section, .location-section, .full-width-image {
 			grid-column: 1 / -1;
 		}
 
-		.full-width-image img {
-			width: 100%;
-			border-radius: 12px;
-			box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-			display: block;
+		h1, h2, .service-item, .location-details p, .btn-email {
+			color: var(--primary-color);
 		}
 
-		/* Typography */
 		h1 {
-			color: var(--primary-color);
 			font-size: 2.75rem;
 			font-weight: 800;
 			letter-spacing: -0.025em;
@@ -77,7 +64,6 @@
 		}
 
 		h2 {
-			color: var(--primary-color);
 			font-size: 0.875rem;
 			font-weight: 700;
 			text-transform: uppercase;
@@ -95,7 +81,6 @@
 			flex-grow: 1;
 		}
 
-		/* Highlights Bar */
 		.highlights-bar {
 			display: flex;
 			flex-wrap: wrap;
@@ -117,17 +102,10 @@
 			flex-shrink: 0;
 		}
 
-		/* Info Sections */
-		.info-section {
-			margin-bottom: 32px;
-		}
-
 		.info-section p {
 			color: #475569;
-			font-size: 1rem;
 		}
 
-		/* Buttons */
 		.btn {
 			display: inline-flex;
 			align-items: center;
@@ -138,7 +116,7 @@
 			font-size: 0.9375rem;
 			font-weight: 700;
 			text-decoration: none;
-			transition: all 0.2s ease;
+			transition: 0.2s;
 			border: 1px solid var(--border-color);
 			background: #fff;
 			width: 100%;
@@ -151,69 +129,44 @@
 			flex-shrink: 0;
 		}
 
-		.btn-directions {
-			color: #2563eb !important;
-			border-color: #bfdbfe;
-			background-color: #f0f7ff;
-		}
-
-		.btn-directions:hover {
-			background-color: #e0efff;
+		.btn:hover {
 			box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 		}
 
-		.btn-facebook {
-			color: #1877F2 !important;
-			border-color: #cbdcf7;
-			background-color: #f0f4ff;
-		}
+		.btn-directions { color: #2563eb; border-color: #bfdbfe; background: #f0f7ff; }
+		.btn-directions:hover { background: #e0efff; }
 
-		.btn-facebook:hover {
-			background-color: #e4ebff;
-			box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-		}
+		.btn-facebook { color: #1877F2; border-color: #cbdcf7; background: #f0f4ff; }
+		.btn-facebook:hover { background: #e4ebff; }
 
-		.btn-phone {
-			color: #16a34a !important;
-			border-color: #bbf7d0;
-			background-color: #f0fdf4;
-		}
+		.btn-phone { color: #16a34a; border-color: #bbf7d0; background: #f0fdf4; }
+		.btn-phone:hover { background: #dcfce7; }
 
-		.btn-phone:hover {
-			background-color: #dcfce7;
-			box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-		}
+		.btn-email { background: var(--bg-light); }
+		.btn-email:hover { background: #f1f5f9; }
 
-		.btn-email {
-			color: var(--primary-color) !important;
-			border-color: var(--border-color);
-			background-color: var(--bg-light);
-		}
-
-		.btn-email:hover {
-			background-color: #f1f5f9;
-			box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-		}
-
-		.contact-buttons {
+		.contact-buttons, .location-details {
 			display: flex;
 			flex-direction: column;
 			gap: 12px;
 			margin-top: 16px;
 		}
 
-		/* Services Grid */
+		.location-details { gap: 20px; }
+
+		.info-section, .services-grid {
+			margin-bottom: 32px;
+		}
+
 		.services-grid {
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 			gap: 16px;
-			margin: 0 0 32px 0;
 		}
 
 		.service-item {
 			padding: 8px 0;
 			font-weight: 600;
-			color: var(--primary-color);
 			display: flex;
 			align-items: center;
 		}
@@ -226,23 +179,14 @@
 			font-weight: 800;
 		}
 
-		/* Image Pane */
-		.image-pane {
-			display: flex;
-			flex-direction: column;
-			gap: 24px;
-		}
-
-		.image-pane img, iframe {
+		.image-pane img, .full-width-image, iframe {
 			width: 100%;
 			border-radius: 12px;
-			box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 			border: 1px solid var(--border-color);
 		}
 
-		iframe {
-			height: 350px;
-		}
+		iframe { height: 350px; }
 
 		.special-note {
 			font-style: italic;
@@ -253,7 +197,6 @@
 			border-left: 2px solid var(--accent-color);
 		}
 
-		/* Location Section */
 		.location-grid {
 			display: grid;
 			grid-template-columns: 1fr 1.5fr;
@@ -261,30 +204,10 @@
 			align-items: start;
 		}
 
-		.location-details {
-			display: flex;
-			flex-direction: column;
-			gap: 20px;
-		}
-
-		.location-details p {
-			font-size: 1rem;
-			font-weight: 500;
-			color: var(--primary-color);
-		}
-
-		/* Responsive */
 		@media (max-width: 1024px) {
-			.container {
-				grid-template-columns: 1fr;
-				padding: 48px;
-				gap: 40px;
-			}
+			.container { grid-template-columns: 1fr; padding: 48px; gap: 40px; }
 			.btn { max-width: 100%; }
-			.location-grid {
-				grid-template-columns: 1fr;
-				gap: 24px;
-			}
+			.location-grid { grid-template-columns: 1fr; gap: 24px; }
 		}
 
 		@media (max-width: 640px) {
@@ -298,7 +221,7 @@
 <body>
 	<div class="container">
 		<!-- Main Pane: Contact Info -->
-		<main class="contact-pane">
+		<main>
 			<h1>Geoff's Auto Repair</h1>
 			<div class="highlights-bar">
 				<a href="https://www.google.com/maps/place/Geoff%27s+Auto+Repair/@53.5392329,-113.3323377,17z/data=!3m1!4b1!4m5!3m4!1s0x53a017d76539bcab:0xb99ecc95c397680a!8m2!3d53.5392329!4d-113.330149"
@@ -355,7 +278,7 @@
 
 			<section class="info-section">
 				<h2>Hours</h2>
-				<p>Monday to Friday 8:00am-5:00pm</p>
+				<p>Monday-Friday 8:00am-5:00pm</p>
 				<p>(excluding statutory holidays)</p>
 				<p>Front door key drop anytime</p>
 				<p class="special-note">Call the shop for special arrangements. We're happy to help.</p>
@@ -371,11 +294,6 @@
 						</svg>
 						Drive1@telus<!--.SPAM-->.net
 					</a>
-					<!-- 
-					The email address above is obfuscated using HTML entities to prevent bots from scraping it. 
-					The comment in the above email address is intentional to prevent bots from scraping it. Please do not remove it.
-					https://spencermortensen.com/articles/email-obfuscation/#text-entity
-					-->
 					<a href="tel:7804670783" class="btn btn-phone">
 						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
 							<path
@@ -383,7 +301,7 @@
 						</svg>
 						(780) 467-0783
 					</a>
-					<a href="https://www.facebook.com/GeoffsAutoService/" target="_blank" class="btn btn-facebook" style="margin-top: 0;">
+					<a href="https://www.facebook.com/GeoffsAutoService/" target="_blank" class="btn btn-facebook">
 						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
 							<path
 										d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
@@ -417,11 +335,9 @@
 						Get Directions
 					</a>
 				</div>
-				<div class="location-map">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2371.038154385674!2d-113.33233772290495!3d53.53923296027322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a017d76539bcab%3A0xb99ecc95c397680a!2sGeoff&#39;s%20Auto+Repair!5e0!3m2!1sen!2sca!4v1775936107258!5m2!1sen!2sca"
-									style="border:0;" allowfullscreen="" loading="lazy"
-									referrerpolicy="no-referrer-when-downgrade"></iframe>
-				</div>
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2371.038154385674!2d-113.33233772290495!3d53.53923296027322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53a017d76539bcab%3A0xb99ecc95c397680a!2sGeoff&#39;s%20Auto+Repair!5e0!3m2!1sen!2sca!4v1775936107258!5m2!1sen!2sca"
+								style="border:0;" allowfullscreen="" loading="lazy"
+								referrerpolicy="no-referrer-when-downgrade"></iframe>
 			</div>
 		</section>
 
@@ -448,9 +364,7 @@
 
 		</section>
 
-		<div class="full-width-image">
-			<img src="MikeChrome.jpg" alt="Artistic picture of Mike, the shop owner, in front of a chrome bike.">
-		</div>
+		<img src="MikeChrome.jpg" alt="Artistic picture of Mike, the shop owner, in front of a chrome bike." class="full-width-image">
 	</div>
 </body>
 

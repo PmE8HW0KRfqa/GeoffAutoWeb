@@ -1,4 +1,4 @@
-create reponsive web page for automotive service
+create responsive web page for automotive service
 html/css only
 no scss or other templates
 main pane is contact info:
@@ -18,5 +18,3 @@ main pane is contact info:
 	Contact
 	Drive1@telus.net
 	(780) 467-0783
-
-second pane is  place holder for four images
